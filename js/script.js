@@ -72,7 +72,7 @@
      control.addEventListener(item.event, item.function);
    });
 
-   nunjucks.configure('/templates');
+   nunjucks.configure('./templates');
 
    setStyles();
    loadLists();
