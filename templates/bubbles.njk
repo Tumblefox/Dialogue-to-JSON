@@ -1,0 +1,40 @@
+{% for line in lines %}
+  <div class="grid dialogue-line" data-index="{{ loop.index0 }}">
+    <div class="grid-item-user">
+      <img src="/images/profile-picture.png">
+      <p>
+        {{ line.name }}
+      </p>
+      <button data-index="{{ loop.index0 }}" class="dialogue-edit edit-btn">Edit</button>
+      <button data-index="{{ loop.index0 }}" class="dialogue-delete delete-btn">Delete</button>
+      <button data-index="{{ loop.index0 }}" class="mobile-dialogue-edit edit-btn">&#9998;</button>
+      <button data-index="{{ loop.index0 }}" class="mobile-dialogue-delete delete-btn">&#128465;</button>
+    </div>
+
+    <div class="grid-item-text">
+      {% if line.color %}
+      <div class="bubble container stackable" style="background-color: rgb({{ line.color.background }}); color: rgb({{ line.color.font }})">
+      {% else %}
+      <div class="bubble container stackable">
+      {% endif %}
+        {% if line.expression and line.action %}
+          <small>
+            <i>{{ line.expression }}, {{  line.action }}</i>
+          </small>
+        {% elif line.expression %}
+          <small>
+            <i>{{ line.expression }}</i>
+          </small>
+        {% elif line.action %}
+          <small>
+            <i>{{ line.action }}</i>
+          </small>
+        {% endif %}
+
+        <p>
+          {{ line.line }}
+        </p>
+      </div>
+    </div>
+  </div>
+{% endfor %}

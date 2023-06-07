@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dialogue to JSON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/nunjucks.min.js"></script>
+    <script src="/js/script.js"></script>
+  </head>
+
+  <body>
+
+    <header id="header" class="stackable">
+      <div id="title-container" class="container">
+        <img src="/images/icon.png">
+        <h1>Dialogue to JSON</h1>
+        <p>A JSON-based dialogue writing tool</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="load" class="stackable">
+        <h2>JSON Options</h2>
+
+        <div class="grid">
+
+          <div class="grid-item-2-1">
+            <div class="stackable">
+              <label>Import</label>
+              <label for="json-import" class="btn">Open File</label>
+              <input id="json-import" type="file" accept=".json">
+            </div>
+            <div>
+              <label>Export</label>
+              <button id="json-export">Save File</button>
+            </div>
+          </div>
+
+          <div class="grid-item-2-2">
+            <label>JSON Preview</label>
+            <textarea id="json-preview" class="w-100" disabled></textarea>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="lists" class="stackable">
+        <h2>Presets</h2>
+
+        <div>
+          <button id="dialogue-clear">Clear</button>
+        </div>
+
+        <div class="grid">
+          <div id="list-characters">
+            <details open>
+              <summary>Characters</summary>
+              <textarea data-id="characters" class="w-100"></textarea>
+            </details>
+          </div>
+          <div id="list-expressions">
+            <details open>
+              <summary>Expressions</summary>
+              <textarea data-id="expressions" class="w-100"></textarea>
+            </details>
+          </div>
+          <div id="list-actions">
+            <details open>
+              <summary>Actions</summary>
+              <textarea data-id="actions" class="w-100"></textarea>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="dialogue" class="container stackable">
+        <h2>Dialogue</h2>
+
+        <div id="dialog-box" class="container stackable">
+        </div>
+
+        <button>Add</button>
+      </section>
+    </main>
+
+    <footer>
+    </footer>
+  </body>
+</html>
+
+<noscript>
+  <p><b>*JavaScript must be enabled.</b></p>
+</noscript>

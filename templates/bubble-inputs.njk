@@ -1,0 +1,30 @@
+<div class="bubble bubble-input container">
+  <form>
+    <label>Name</label>
+    <select class="w-100" id="name" required>
+      {% for name in names %}
+        <option value="{{ name }}">{{ name }}</option>
+      {% endfor %}
+    </select>
+
+    <label>Expression</label>
+    <select class="w-100" id="expression">
+      {% for expression in expressions %}
+        <option value="{{ expression }}">{{ expression }}</option>
+      {% endfor %}
+    </select>
+
+    <label>Action</label>
+    <select class="w-100" id="action">
+      {% for action in actions %}
+        <option value="{{ action }}">{{ action }}</option>
+      {% endfor %}
+    </select>
+
+    <label>Line</label>
+    <textarea class="w-100" id="line" required></textarea>
+
+    <button type="submit">Save</button>
+    <button type="button" id="close-bubble-form">Close</button>
+  </form>
+</div>
