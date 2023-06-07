@@ -12,8 +12,8 @@
 ### Adding Lines of Dialogue
 The "ADD" button opens a form that allows you to add dialogue. The form includes the presets you specified above as options.
 
-###Editing Dialogue
+### Editing Dialogue
 By hovering over a speech bubble, two buttons become visible: "EDIT" and "DELETE." The former loads a form to allow you to edit the dialogue and the latter allows you to remove dialogue.
 
-###Importing and Exporting
+### Importing and Exporting
 By clicking "SAVE FILE," all of your dialogue will be exported as a .JSON file. A .JSON file created with this tool can be loaded by clicking "OPEN FILE" and accepting all prompts.
